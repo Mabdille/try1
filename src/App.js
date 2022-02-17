@@ -1,12 +1,14 @@
 import { Route, BrowserRouter as Router, Routes, Link } from "react-router-dom"
 import HomePage from "./components/HomePage"
 import HomeScreen from "./components/HomeScreen";
+// import HomeScreen from "./components/HomeScreen";
 const App = () => {
   return (
     <div className="App">
       <h1 className='text-info  text-center'>
+        <HomePage />
       </h1>
-      
+ 
       <Router>
       <nav>
         <ul>
