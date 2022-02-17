@@ -1,29 +1,19 @@
 import { Route, BrowserRouter as Router, Routes, Link } from "react-router-dom"
 import HomePage from "./components/HomePage"
 import HomeScreen from "./components/HomeScreen";
-// import HomeScreen from "./components/HomeScreen";
+import Header from "./components/Header";
+
 const App = () => {
   return (
     <div className="App">
-      <h1 className='text-info  text-center'>
-        <HomePage />
-      </h1>
+      <Header />
  
       <Router>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/homescreen">Quran</Link>
-          </li>
-          </ul>
-      </nav>
-          <Routes>
+      
+        <Routes>
               <Route path="/" exact element={<HomePage/>} />
-              <Route path="/homescreen" element={<HomeScreen/>} />
-          </Routes>
+              <Route path="/homescreen" element={<HomeScreen />} />
+        </Routes>
       </Router>
     </div>
   );
